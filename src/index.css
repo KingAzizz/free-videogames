@@ -1,13 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Space Mono', monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+ 
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.App{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  
 }
+
+
+.header{
+  text-align: center;
+  margin: 1px;
+  padding: 30px;
+}
+select{
+  padding: 8px;
+  outline: none;
+  border: none;
+  border-radius: 1rem;
+  background-color: cornflowerblue;
+  color: white;
+  font-size: 1.2rem;
+}
+
+
+
+ul{
+  list-style-type:none;
+}
+li{
+  position: relative;
+  margin: 6px;
+  padding: 4px;
+  width: 400px;
+ font-size: 1.5em;
+ right: 1.4rem;
+}
+.game-card{
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+  position: relative;
+  transition: .5s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  
+  bottom: 1.3rem;
+}
+ 
+a:hover{
+  color: gray;
+}
+
+
