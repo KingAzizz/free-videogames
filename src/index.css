@@ -17,7 +17,6 @@ body {
   
 }
 
-
 .header{
   text-align: center;
   margin: 1px;
@@ -38,34 +37,47 @@ select{
 ul{
   list-style-type:none;
 }
-li{
+
+.game-card{
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
   position: relative;
   margin: 6px;
   padding: 4px;
   width: 400px;
  font-size: 1.5em;
  right: 1.4rem;
-}
-.game-card{
-  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+ overflow: hidden;
+ transition: .5;
+
 }
 
-a{
-  text-decoration: none;
+
+.game-title{
   color: black;
   position: relative;
-  transition: .5s;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  padding: 30px;
-  
-  bottom: 1.3rem;
+  padding: 20px;
+  bottom: 1.4rem;
 }
- 
-a:hover{
-  color: gray;
+.learn-more{
+  position:absolute;
+  bottom: 0;
+  left: 0;
+  outline: none;
+  border: none;
+  padding: 12px;
+  width: 410px;
+  background-color: white;
+  color: cornflowerblue;
+  transition: 1.3s;
+  cursor: pointer;
 }
+.learn-more:hover{
+  box-shadow: inset 410px 0 0 0 cornflowerblue;
+  color: black;
+}
+
 
 
