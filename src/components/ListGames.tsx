@@ -1,9 +1,12 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-const ListGames = () => {
-  const [games, setGames] = useState(Array);
-  const [catgory, setGatgory] = useState("shooter");
-  let catgoryGames = ["Shooter", "MMORPG", "Strategy",'Sandbox','Fighting','Social','MOBA','MMO','Card']; 
+const ListGames:React.FC = () => {
+  const [games, setGames] = useState([]);
+  const [catgory, setGatgory] = useState<string>("shooter");
+
+
+
+  let catgoryGames:string[] = ["Shooter", "MMORPG", "Strategy",'Sandbox','Fighting','Social','MOBA','MMO','Card']; 
   useEffect(() => {
 
       const options: any = {
@@ -32,7 +35,7 @@ const ListGames = () => {
       <select id="select-catgory"
        onChange={(e) => setGatgory(e.target.value)}
        >
-        {catgoryGames.map((opt, index) => (
+        {catgoryGames.map((opt:string, index) => (
             <option key={index}>
             {opt}
           </option>
@@ -42,11 +45,13 @@ const ListGames = () => {
       <ul>
         {games.map((arr: any, index) => (
             
-                <li className="game-card" key={index}>
+                <li className='game-card' key={index}>
               <img src={arr.thumbnail} alt="games thumbnail" style={{width:'402px'}} /> &nbsp;
-            <a href={arr.game_url}>
+            <p className="game-title">
               {arr.title}
-            </a> 
+            </p>
+           
+            <a href= {arr.game_url}> <button type="button" className="learn-more" >Learn more</button></a>
           </li>
               
         ))}
